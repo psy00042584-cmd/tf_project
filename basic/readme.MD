@@ -67,6 +67,10 @@ Changes to Outputs:
 - step4 : 테라폼 적용 (실제 생성)
 ```
 terraform apply
+---
+생성 후 접속 테스트
+- 호스트 IP 변경 : ec2 인스턴스 대시보드로 확인
+- 사용자 변경 : ec2-user
 ```
 - step5 : 테라폼 삭제
 ```
