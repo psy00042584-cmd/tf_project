@@ -11,10 +11,10 @@
 
 ```
 /basic
-L provider.tf
+L provider.tf       : 버전, 공급자정보 기술
 L terraform.tfvars
 L main.tf
-L variables.tf
+L variables.tf      : 테라폼 변수
 L outputs.tf
 L .gitignore
 ```
