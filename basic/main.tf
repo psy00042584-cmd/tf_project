@@ -65,6 +65,13 @@ resource "aws_security_group" "ai-cp2-09-sg" {
   }
   # 아웃바운드 규칙#############
   egress {
+    # 모든 프로토콜 개방
+    protocol = "-1"
+    # 모든 포트 개방
+    from_port = 0
+    to_port = 0
+    # IP 전세계로 개방
+    cidr_blocks = ["0.0.0.0/0"]
 
   }
 }
