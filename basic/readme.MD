@@ -38,7 +38,32 @@ terraform validate
 - step3 : 실행계획 확인(플래닝, 시뮬레이션)
 ```
 terraform plan
+---
+실제 구성할 인프라에 대한 시뮬레이션 ( >=, +,-...) 기호 주목
+Changes to Outputs:
+  + default_subnets_ids = {
+      + filter   = [
+          + {
+              + name   = "vpc-id"
+              + values = [
+                  + "vpc-0eebee125226fd6c5",
+                ]
+            },
+        ]
+      + id       = "ap-northeast-2"
+      + ids      = [
+          + "subnet-049c8f72bb109a11e",
+          + "subnet-0cc79271aae2ac523",
+          + "subnet-0928223142a64ef05",
+          + "subnet-011432f9b62dee9b6",
+        ]
+      + region   = "ap-northeast-2"
+      + tags     = null
+      + timeouts = null
+    }
+  + default_vpc_id      = "vpc-0eebee125226fd6c5"
 ```
+
 - step4 : 테라폼 적용 (실제 생성)
 ```
 terraform apply
