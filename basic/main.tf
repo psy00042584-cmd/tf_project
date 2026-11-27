@@ -52,11 +52,15 @@ resource "aws_security_group" "ai-cp2-09-sg" {
     # 0.0.0.0/0 => 모든 eodurvhr => 전세계 어디서든
     # n.n.n.n/n => 모든 eodurvhr => 오직 한개의 IP 내 거
     cidr_blocks =[ "222.108.125.33/32" ]
+    # 설명. 강의장에서만 접속
+    description = "SSH"
   }
   ingress {
     protocol = "tcp"
     from_port = 80
     to_port = 80
+    cidr_blocks=["0.0.0.0/0"] # 전세계로 개방
+    description = "HTTP"
 
   }
   # 아웃바운드 규칙#############
