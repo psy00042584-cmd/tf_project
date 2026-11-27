@@ -12,9 +12,35 @@
 ```
 /basic
 L provider.tf
+L terraform.tfvars
 L main.tf
 L variables.tf
 L outputs.tf
-L terraform.tfvars
 L .gitignore
+```
+
+## 인프라 구성 핵심 절차
+- 인프라 코드가 있는 위치로 이동 (단, 옵션부여로 경로지정 가능)
+```
+cd basic
+```
+- step1 : 테라폼 초기화
+```
+terraform.init
+```
+- step2 : 문법 검사(체킹)
+```
+terraform validate
+```
+- step3 : 실행계획 확인(플래닝, 시뮬레이션)
+```
+terraform plan
+```
+- step4 : 테라폼 적용 (실제 생성)
+```
+terraform apply
+```
+- step5 : 테라폼 삭제
+```
+terraform destroy
 ```
